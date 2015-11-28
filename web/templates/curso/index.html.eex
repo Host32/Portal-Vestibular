@@ -1,0 +1,31 @@
+<h2>Nossos Cursos</h2>
+
+<!-- start course content -->
+<div class="col-lg-8 col-md-8 col-sm-8">
+  <div class="courseArchive_content">
+    <div class="row">
+      <%= for curso <- @cursos do %>
+        <!-- start single course -->
+        <div class="col-lg-6 col-md-6 col-sm-6">
+         <div class="single_course wow fadeInUp">
+           <div class="singCourse_imgarea">
+             <img src="/images/cursos/<%= curso.banner_pequeno %>" />
+             <div class="mask">
+               <%= link "Ver mais sobre o curso", to: curso_path(@conn, :show, curso), class: "course_more" %>
+             </div>
+           </div>
+           <div class="singCourse_content">
+           <h3 class="singCourse_title"><%= link curso.nome, to: curso_path(@conn, :show, curso) %></h3>
+           <p class="singCourse_price"><span>R$<%= curso.valor %></span> Por mês</p>
+           <p><%= curso.descricao_curta %></p>
+           </div>
+           <div class="singCourse_period">
+             <p><%= curso.periodo %></p>
+           </div>
+         </div>
+        </div>
+        <!-- End single course -->
+      <% end %>
+    </div>
+  </div>
+</div>

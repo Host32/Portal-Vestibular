@@ -1,0 +1,40 @@
+<h2><%= @curso.nome %></h2>
+<section id="courseArchive">
+  <div class="container">
+    <div class="row">
+      <!-- start course content -->
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="courseArchive_content">
+         <div class="singlecourse_ferimg_area">
+           <div class="singlecourse_ferimg">
+             <img src="/images/cursos/<%= @curso.banner_grande %>" alt="img">
+           </div>
+            <div class="singlecourse_bottom">
+              <h2><%= @curso.nome %></h2>
+              <span class="singlecourse_period">
+                <%= @curso.periodo %>
+              </span>
+              <span class="singlecourse_price">R$<%= @curso.valor %> Por mês</span>
+            </div>
+         </div>
+         <div class="single_course_content">
+           <h2>Sobre o Curso</h2>
+           <p><%= @curso.descricao_longa %></p>
+         </div>
+         <div class="singlecourse_ferimg">
+           <img src="/images/cursos/<%= @curso.foto_1 %>" alt="img">
+         </div>
+         <div class="singlecourse_ferimg">
+           <img src="/images/cursos/<%= @curso.foto_2 %>" alt="img">
+         </div>
+         <div class="singlecourse_ferimg">
+           <img src="/images/cursos/<%= @curso.foto_3 %>" alt="img">
+         </div>
+         <div class="singlecourse_ferimg">
+           <img src="/images/cursos/<%= @curso.foto_4 %>" alt="img">
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>

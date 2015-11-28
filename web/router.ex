@@ -16,7 +16,8 @@ defmodule PortalVestibular.Router do
   scope "/", PortalVestibular do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", PrincipalController, :index
+    resources "/cursos", CursoController
   end
 
   # Other scopes may use custom stacks.

@@ -44,5 +44,7 @@
 
 </ul>
 
-<%= link "Edit", to: inscricao_path(@conn, :edit, @inscricao) %>
-<%= link "Back", to: inscricao_path(@conn, :index) %>
+<%= if logged_in?(@conn) do %>
+  <%= link "Edit", to: inscricao_path(@conn, :edit, @inscricao) %>
+  <%= link "Back", to: inscricao_path(@conn, :index) %>
+<% end %>

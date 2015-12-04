@@ -17,6 +17,11 @@ defmodule PortalVestibular.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PrincipalController, :index
+
+    get "/login", SessionController, :new
+    post "/login", SessionController, :create
+    delete "/login", SessionController, :delete
+    
     resources "/cursos", CursoController
 
     get "/inscricoes/success", InscricaoController, :success

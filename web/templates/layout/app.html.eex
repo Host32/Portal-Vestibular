@@ -68,6 +68,10 @@
               <li><%= link "Cursos", to: curso_path(@conn, :index) %></li>
               <li><%= link "Inscrições online", to: inscricao_path(@conn, :new) %></li>
               <li><%= link "Consultar inscrição", to: inscricao_path(@conn, :pesquisar) %></li>
+              <%= if logged_in?(@conn) do %>
+                <li><%= link "Listar Inscrições", to: inscricao_path(@conn, :index) %></li>
+                <li><%= link "Cadastrar novo Curso", to: curso_path(@conn, :new) %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
           </div>

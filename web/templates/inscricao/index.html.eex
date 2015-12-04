@@ -1,0 +1,40 @@
+<h2>Listing inscricoes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Endereco</th>
+      <th>Telefone</th>
+      <th>Celular</th>
+      <th>Email</th>
+      <th>Cpf</th>
+      <th>Curso 1</th>
+      <th>Curso 2</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for inscricao <- @inscricoes do %>
+    <tr>
+      <td><%= inscricao.nome %></td>
+      <td><%= inscricao.endereco %></td>
+      <td><%= inscricao.telefone %></td>
+      <td><%= inscricao.celular %></td>
+      <td><%= inscricao.email %></td>
+      <td><%= inscricao.cpf %></td>
+      <td><%= inscricao.curso_1 %></td>
+      <td><%= inscricao.curso_2 %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: inscricao_path(@conn, :show, inscricao), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: inscricao_path(@conn, :edit, inscricao), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: inscricao_path(@conn, :delete, inscricao), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New inscricao", to: inscricao_path(@conn, :new) %>

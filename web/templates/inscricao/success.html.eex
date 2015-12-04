@@ -1,0 +1,7 @@
+<h2>Inscrição realizada com sucesso</h2>
+
+<div>
+  <p>
+    Obrigado por se inscrever! <%= link "Clique aqui", to: inscricao_path(@conn, :pesquisar) %> para consultar o status da sua inscrição
+  </p>
+</div>

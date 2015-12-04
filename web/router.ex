@@ -18,6 +18,10 @@ defmodule PortalVestibular.Router do
 
     get "/", PrincipalController, :index
     resources "/cursos", CursoController
+
+    get "/inscricoes/success", InscricaoController, :success
+    get "/inscricoes/pesquisar", InscricaoController, :pesquisar
+    resources "/inscricoes", InscricaoController
   end
 
   # Other scopes may use custom stacks.

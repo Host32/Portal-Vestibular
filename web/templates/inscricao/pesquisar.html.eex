@@ -1,0 +1,14 @@
+<h2>Consultar inscrição</h2>
+
+<div>
+  <form method="GET">
+    <div class="form-group">
+      <label class="control-label" for="inscricao_cpf">CPF</label>
+      <input class="form-control" id="inscricao_cpf" name="cpf" type="text">
+    </div>
+    
+    <div class="form-group">
+      <%= submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </form>
+</div>

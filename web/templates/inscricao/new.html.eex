@@ -1,0 +1,7 @@
+<h2>New inscricao</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        cursos: @cursos,
+                        action: inscricao_path(@conn, :create) %>
+
+<%= link "Back", to: inscricao_path(@conn, :index) %>

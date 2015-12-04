@@ -1,0 +1,48 @@
+<h2>Show inscricao</h2>
+
+<ul>
+
+  <li>
+    <strong>Nome:</strong>
+    <%= @inscricao.nome %>
+  </li>
+
+  <li>
+    <strong>Endereco:</strong>
+    <%= @inscricao.endereco %>
+  </li>
+
+  <li>
+    <strong>Telefone:</strong>
+    <%= @inscricao.telefone %>
+  </li>
+
+  <li>
+    <strong>Celular:</strong>
+    <%= @inscricao.celular %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @inscricao.email %>
+  </li>
+
+  <li>
+    <strong>Cpf:</strong>
+    <%= @inscricao.cpf %>
+  </li>
+
+  <li>
+    <strong>Curso 1:</strong>
+    <%= @inscricao.curso_1 %>
+  </li>
+
+  <li>
+    <strong>Curso 2:</strong>
+    <%= @inscricao.curso_2 %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: inscricao_path(@conn, :edit, @inscricao) %>
+<%= link "Back", to: inscricao_path(@conn, :index) %>
